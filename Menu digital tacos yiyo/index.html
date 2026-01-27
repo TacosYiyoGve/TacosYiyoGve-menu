@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tacos Yiyo | Menú</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+
+    <div class="header-center">
+        <img src="tacosyiyo-logo-ar.png" class="logo">
+
+        <h1>Tacos Yiyo</h1>
+        <p>Menú digital</p>
+    </div>
+
+    <div class="contact-box">
+        <div class="contact-title">Info de contacto</div>
+
+        <div class="phone-row">
+            <span>📞</span>
+            <span id="telefono">687-145-1508</span>
+        </div>
+
+        <button class="copy-btn" onclick="copiarTelefono()">
+            Copiar número
+        </button>
+    </div>
+
+</header>
+
+<div class="container">
+
+    <h2 class="section-title">🌮 Especialidades</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="imagenes/TacoMaiz.png">
+            <div class="card-body">
+                <h3>Taco Maíz</h3>
+                <p>Lechuga y cebolla</p>
+                <span>$40</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/TacoHarina.png">
+            <div class="card-body">
+                <h3>Taco Harina</h3>
+                <p>Lechuga y cebolla</p>
+                <span>$42</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/ChilenaMaiz.png">
+            <div class="card-body">
+                <h3>Chilena Maíz</h3>
+                <p>Lechuga, cebolla y chile</p>
+                <span>$47</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/Chilenota.png">
+            <div class="card-body">
+                <h3>Chilenota</h3>
+                <p>Lechuga, cebolla y chile</p>
+                <span>$110</span>
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">🥤 Bebidas</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="imagenes/Coca600.png">
+            <div class="card-body">
+                <h3>Coca Cola 600ml</h3>
+                <p>Bebida</p>
+                <span>$32</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="imagenes/AguaCiel.png">
+            <div class="card-body">
+                <h3>Agua 1Lt</h3>
+                <p>Bebida</p>
+                <span>$27</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © Tacos Yiyo · Menú digital
+</footer>
+
+<script>
+function copiarTelefono() {
+    const telefono = document.getElementById("telefono").innerText;
+
+    navigator.clipboard.writeText(telefono).then(() => {
+        alert("📋 Número copiado: " + telefono);
+    });
+}
+</script>
+
+</body>
+</html>
