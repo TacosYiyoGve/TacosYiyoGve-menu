@@ -8,34 +8,32 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #0f0f0f;
     color: #fff;
-    -webkit-font-smoothing: antialiased; /* Suaviza la letra en móviles */
+    -webkit-font-smoothing: antialiased;
 }
 
 /* ================= HEADER ================= */
 
 .header {
     background: linear-gradient(135deg, #ff7a00, #ffb347);
-    padding: 35px 20px 40px; /* Un poco más de espacio abajo */
+    padding: 35px 20px 40px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    position: relative; /* Necesario para contener elementos absolutos en Desktop */
+    position: relative;
 }
 
-/* Contenedor interno del header para controlar el layout */
 .header-content {
     max-width: 900px;
     margin: 0 auto;
-    position: static; /* Por defecto estático */
+    position: static;
 }
 
-/* CENTRO */
 .header-center {
     text-align: center;
 }
 
 .logo {
     width: 95px;
-    height: 95px; /* Fijamos altura para evitar saltos */
+    height: 95px;
     margin-bottom: 10px;
     border-radius: 50%;
     background: white;
@@ -59,11 +57,9 @@ body {
 /* ================= CONTACTO ================= */
 
 .contact-box {
-    /* Diseño por defecto (Desktop) */
     position: absolute;
     right: 20px;
     top: 20px;
-    
     background: rgba(255, 255, 255, .97);
     color: #ff7a00;
     padding: 16px 20px;
@@ -102,7 +98,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s ease;
-    width: 100%; /* Botón ancho completo */
+    width: 100%;
 }
 
 .copy-btn:active {
@@ -126,7 +122,6 @@ body {
 
 .grid {
     display: grid;
-    /* GRID INTELIGENTE: Si la pantalla es muy chica, usa 1 columna completa */
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 20px;
 }
@@ -156,7 +151,7 @@ body {
     padding: 16px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Para alinear botones o precios al fondo si fuera necesario */
+    flex-grow: 1;
 }
 
 .card-body h3 {
@@ -168,12 +163,47 @@ body {
     font-size: 14px;
     color: #bbb;
     line-height: 1.4;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-.card-body span {
+/* --- NUEVOS ESTILOS PARA PRECIOS --- */
+
+/* Contenedor para la tabla de precios Puerco/Res */
+.price-table {
+    margin-top: auto; /* Empuja al fondo */
+    background: rgba(255,255,255,0.05); /* Fondo sutil para separar */
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.price-row:last-child {
+    margin-bottom: 0;
+}
+
+.p-label {
+    font-size: 13px;
+    color: #ccc;
+    font-weight: 400;
+}
+
+.p-value {
+    font-weight: 700;
+    font-size: 17px;
+    color: #ffb347;
+}
+
+/* Estilo para productos que solo tienen un precio (Bebidas) */
+.single-price {
     display: block;
-    margin-top: auto; /* Empuja el precio al fondo de la tarjeta */
+    margin-top: auto;
+    text-align: right;
     font-weight: 700;
     font-size: 18px;
     color: #ffb347;
@@ -188,48 +218,30 @@ footer {
     color: #666;
 }
 
-/* ================= RESPONSIVE (CELULARES) ================= */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
+    .header { padding-bottom: 30px; }
     
-    .header {
-        padding-bottom: 30px;
-    }
-
-    /* Quitamos la posición absoluta de la caja de contacto */
     .contact-box {
-        position: static; /* Ya no flota */
-        margin: 25px auto 0; /* Centrado y con margen arriba */
+        position: static;
+        margin: 25px auto 0;
         text-align: center;
         width: 100%;
-        max-width: 300px; /* Que no sea demasiado ancha */
+        max-width: 300px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
 
-    /* Centramos el contenido de la caja */
-    .phone-row {
-        justify-content: center;
-    }
-
-    .header-center h1 {
-        font-size: 28px; /* Título un poco más chico */
-    }
-
-    .section-title {
-        font-size: 22px;
-        margin-top: 30px;
-    }
+    .phone-row { justify-content: center; }
+    .header-center h1 { font-size: 28px; }
+    .section-title { font-size: 22px; margin-top: 30px; }
 
     .grid {
-        /* En celulares muy angostos, reducimos el gap */
         gap: 15px; 
-        grid-template-columns: repeat(2, 1fr); /* Forzar 2 columnas en móviles modernos */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Para pantallas muy muy pequeñas (como iPhone SE o Galaxy Fold cerrado) */
 @media (max-width: 380px) {
-    .grid {
-        grid-template-columns: 1fr; /* 1 sola columna */
-    }
+    .grid { grid-template-columns: 1fr; }
 }
