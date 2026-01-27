@@ -11,27 +11,26 @@
 <body>
 
 <header class="header">
-
-    <div class="header-center">
-        <img src="./tacosyiyo-logo-ar.png" class="logo">
-
-        <h1>Tacos Yiyo</h1>
-        <p>Menú digital</p>
-    </div>
-
-    <div class="contact-box">
-        <div class="contact-title">Info de contacto</div>
-
-        <div class="phone-row">
-            <span>📞</span>
-            <span id="telefono">687-145-1508</span>
+    <div class="header-content">
+        
+        <div class="header-center">
+            <img src="./tacosyiyo-logo-ar.png" alt="Logo Tacos Yiyo" class="logo">
+            <h1>Tacos Yiyo</h1>
+            <p>Menú digital</p>
         </div>
 
-        <button class="copy-btn" onclick="copiarTelefono()">
-            Copiar número
-        </button>
-    </div>
+        <div class="contact-box">
+            <div class="contact-title">Info de contacto</div>
+            <div class="phone-row">
+                <span>📞</span>
+                <span id="telefono">687-145-1508</span>
+            </div>
+            <button class="copy-btn" onclick="copiarTelefono()">
+                Copiar número
+            </button>
+        </div>
 
+    </div>
 </header>
 
 <div class="container">
@@ -39,9 +38,8 @@
     <h2 class="section-title">🌮 Especialidades</h2>
 
     <div class="grid">
-
         <div class="card">
-            <img src="./imagenes/TacoMaiz.png">
+            <img src="./imagenes/TacoMaiz.png" alt="Taco Maíz">
             <div class="card-body">
                 <h3>Taco Maíz</h3>
                 <p>Lechuga y cebolla</p>
@@ -50,7 +48,7 @@
         </div>
 
         <div class="card">
-            <img src="./imagenes/TacoHarina.png">
+            <img src="./imagenes/TacoHarina.png" alt="Taco Harina">
             <div class="card-body">
                 <h3>Taco Harina</h3>
                 <p>Lechuga y cebolla</p>
@@ -59,7 +57,7 @@
         </div>
 
         <div class="card">
-            <img src="./imagenes/ChilenaMaiz.png">
+            <img src="./imagenes/ChilenaMaiz.png" alt="Chilena Maíz">
             <div class="card-body">
                 <h3>Chilena Maíz</h3>
                 <p>Lechuga, cebolla y chile</p>
@@ -68,22 +66,20 @@
         </div>
 
         <div class="card">
-            <img src="./imagenes/Chilenota.png">
+            <img src="./imagenes/Chilenota.png" alt="Chilenota">
             <div class="card-body">
                 <h3>Chilenota</h3>
                 <p>Lechuga, cebolla y chile</p>
                 <span>$110</span>
             </div>
         </div>
-
     </div>
 
     <h2 class="section-title">🥤 Bebidas</h2>
 
     <div class="grid">
-
         <div class="card">
-            <img src="./imagenes/Coca600.png">
+            <img src="./imagenes/Coca600.png" alt="Coca Cola">
             <div class="card-body">
                 <h3>Coca Cola 600ml</h3>
                 <p>Bebida</p>
@@ -92,14 +88,13 @@
         </div>
 
         <div class="card">
-            <img src="./imagenes/AguaCiel.png">
+            <img src="./imagenes/AguaCiel.png" alt="Agua">
             <div class="card-body">
                 <h3>Agua 1Lt</h3>
                 <p>Bebida</p>
                 <span>$27</span>
             </div>
         </div>
-
     </div>
 
 </div>
@@ -111,9 +106,11 @@
 <script>
 function copiarTelefono() {
     const telefono = document.getElementById("telefono").innerText;
-
+    // Usamos la API moderna de portapapeles, con fallback para navegadores viejos si fuera necesario
     navigator.clipboard.writeText(telefono).then(() => {
         alert("📋 Número copiado: " + telefono);
+    }).catch(err => {
+        console.error('Error al copiar: ', err);
     });
 }
 </script>
