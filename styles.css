@@ -298,3 +298,45 @@ footer {
         box-sizing: border-box;
     }
 }
+
+/* ================= BOTÓN FLOTANTE ================= */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: orange; /* Color rosa para San Valentín */
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(255, 75, 180, 0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: 2px solid white;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    background: #e0389a;
+    color: white;
+}
+
+/* Animación suave para el salto al ID */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ocultar en pantallas muy pequeñas si estorba (opcional) */
+@media (max-width: 480px) {
+    .floating-btn {
+        bottom: 15px;
+        right: 15px;
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+}
