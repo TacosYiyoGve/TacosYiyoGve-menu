@@ -770,7 +770,7 @@ h2.section-title {
     border-left: 1px solid #333;
     box-shadow: -10px 0 30px rgba(0,0,0,0.8);
     /* Aseguramos que ocupe bien el espacio */
-    display: flex; 
+    display: none; 
     flex-direction: column;
 }
 
