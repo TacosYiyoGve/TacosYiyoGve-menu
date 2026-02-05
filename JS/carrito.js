@@ -1,19 +1,21 @@
 let carrito = [];
 
-function agregarAlCarrito(nombre, precio, ingredientes = []) {
+// Agregamos el 4to parámetro: cantidad (por defecto 1 para bebidas que no usan modal)
+function agregarAlCarrito(nombre, precio, ingredientes = [], cantidad = 1) {
 
     const key = ingredientes.sort().join(",");
     const existente = carrito.find(p => p.nombre === nombre && p.key === key);
 
     if (existente) {
-        existente.cantidad++;
+        // Sumamos la cantidad que seleccionó el usuario
+        existente.cantidad += cantidad;
     } else {
-        carrito.push({ nombre, precio, ingredientes, key, cantidad: 1 });
+        // Creamos el producto con la cantidad seleccionada
+        carrito.push({ nombre, precio, ingredientes, key, cantidad: cantidad });
     }
 
     actualizarUI();
 }
-
 function actualizarUI() {
     const lista = document.getElementById("cart-list");
     const totalSpan = document.getElementById("cart-total");
@@ -30,12 +32,19 @@ function actualizarUI() {
             : "";
 
         const li = document.createElement("li");
+        li.className = "carrito-item"; // Agregamos clase para estilo
         li.innerHTML = `
-            <div>
-                <strong>${item.cantidad}x ${item.nombre}</strong><br>${extras}
+            <div class="info-producto">
+                <span class="cantidad-badge">${item.cantidad}x</span>
+                <div class="detalles">
+                    <strong>${item.nombre}</strong>
+                    ${extras ? `<div class="subtexto">${extras}</div>` : ''}
+                </div>
             </div>
-            <span>$${item.precio * item.cantidad}</span>
-            <button onclick="eliminar(${i})">✕</button>
+            <div class="acciones-producto">
+                <span class="precio-item">$${item.precio * item.cantidad}</span>
+                <button class="btn-eliminar" onclick="eliminar(${i})">✕</button>
+            </div>
         `;
         lista.appendChild(li);
     });
