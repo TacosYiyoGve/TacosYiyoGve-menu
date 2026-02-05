@@ -367,18 +367,24 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Para que no desaparezca en pantallas pequeñas */
+/* ================= RESPONSIVE (MÓVIL) ================= */
 @media (max-width: 768px) {
-    .floating-btn {
-        bottom: 20px;   /* Más pegado al borde en Cel */
+    
+    .floating-btn, 
+    .floating-btn-desayunos {
         right: 15px;
-        
-        /* Tamaño más pequeño para Celular */
-        padding: 10px 16px; 
-        font-size: 13px; 
-        
+        padding: 10px 16px;  /* Tamaño reducido */
+        font-size: 13px;     /* Letra más pequeña */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         gap: 6px;
+    }
+
+    .floating-btn {
+        bottom: 20px;   /* Pegado abajo */
+    }
+
+    .floating-btn-desayunos {
+        bottom: 75px;   /* Un poco más arriba del de Combos */
     }
 }
 
