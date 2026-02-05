@@ -12,7 +12,7 @@
 
 <header class="header">
     <div class="header-content">
-        
+
         <div class="header-center">
             <img src="./tacosyiyo-logo-ar.png" alt="Logo Tacos Yiyo" class="logo">
             <h1>Tacos Yiyo</h1>
@@ -23,20 +23,18 @@
             <div class="contact-title">Info de contacto</div>
             <div class="phone-row">
                 <span>📞</span>
-                <span id="telefono">687-145-1508</span>
+                <span id="telefono">687-876-1552</span>
             </div>
-            <button class="copy-btn" onclick="copiarTelefono()">
-                Copiar número
-            </button>
-            <a href="https://wa.me/526878761552" target="_blank" class="wsp-btn">
-                📞 Hacer pedido
-            </a>
+            <button class="copy-btn" onclick="copiarTelefono()">Copiar número</button>
+            <a href="https://wa.me/526878761552" target="_blank" class="wsp-btn">📞 Hacer pedido</a>
         </div>
+
     </div>
 </header>
 
 <nav class="category-nav">
     <div class="nav-scroll">
+        <a href="#desayunos" class="nav-item">☀️ Desayunos</a>
         <a href="#tacos" class="nav-item">🌮 Tacos</a>
         <a href="#chilenas" class="nav-item">🌶️ Chilenas</a>
         <a href="#tortas" class="nav-item">🥖 Tortas</a>
@@ -48,349 +46,465 @@
 
 <div class="container">
 
-    <h2 id="tacos" class="section-title">🌮 Tacos y Mixtas</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="./imagenes/TacoMaiz.png" alt="Taco Maíz Puerco">
-            <div class="card-body">
-                <h3>Taco Maíz Puerco</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$34</span></div></div>
-                <button class="add-to-cart" data-nombre="Taco Maíz Puerco" data-precio="34">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/TacoMaiz.png" alt="Taco Maíz Res">
-            <div class="card-body">
-                <h3>Taco Maíz Res</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$40</span></div></div>
-                <button class="add-to-cart" data-nombre="Taco Maíz Res" data-precio="40">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/TacoHarina.png" alt="Taco Harina Puerco">
-            <div class="card-body">
-                <h3>Taco Harina Puerco</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$38</span></div></div>
-                <button class="add-to-cart" data-nombre="Taco Harina Puerco" data-precio="38">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/TacoHarina.png" alt="Taco Harina Res">
-            <div class="card-body">
-                <h3>Taco Harina Res</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$42</span></div></div>
-                <button class="add-to-cart" data-nombre="Taco Harina Res" data-precio="42">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/Gordita.png" alt="Gordita Puerco">
-            <div class="card-body">
-                <h3>Gordita Puerco</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$70</span></div></div>
-                <button class="add-to-cart" data-nombre="Gordita Puerco" data-precio="70">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/Gordita.png" alt="Gordita Res">
-            <div class="card-body">
-                <h3>Gordita Res</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$75</span></div></div>
-                <button class="add-to-cart" data-nombre="Gordita Res" data-precio="75">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/TacoMaiz.png" alt="Mixta Sencilla Maíz Puerco">
-            <div class="card-body">
-                <h3>Mixta Senc. Maíz Puerco</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$40</span></div></div>
-                <button class="add-to-cart" data-nombre="Mixta Senc. Maíz Puerco" data-precio="40">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/TacoMaiz.png" alt="Mixta Sencilla Maíz Res">
-            <div class="card-body">
-                <h3>Mixta Senc. Maíz Res</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$45</span></div></div>
-                <button class="add-to-cart" data-nombre="Mixta Senc. Maíz Res" data-precio="45">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/Chilenota.png" alt="Super Mixta Puerco">
-            <div class="card-body">
-                <h3>Super Mixta Puerco</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$92</span></div></div>
-                <button class="add-to-cart" data-nombre="Super Mixta Puerco" data-precio="92">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/Chilenota.png" alt="Super Mixta Res">
-            <div class="card-body">
-                <h3>Super Mixta Res</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$105</span></div></div>
-                <button class="add-to-cart" data-nombre="Super Mixta Res" data-precio="105">➕ Agregar</button>
-            </div>
-        </div>
-    </div>
+<!-- ================= TACOS ================= -->
 
-    <h2 id="chilenas" class="section-title">🌶️ Chilenas</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="./imagenes/ChilenaMaiz.png" alt="Chilena Maíz Puerco">
-            <div class="card-body">
-                <h3>Chilena Maíz Puerco</h3>
-                <p>Chile, lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$44</span></div></div>
-                <button class="add-to-cart" data-nombre="Chilena Maíz Puerco" data-precio="44">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/ChilenaMaiz.png" alt="Chilena Maíz Res">
-            <div class="card-body">
-                <h3>Chilena Maíz Res</h3>
-                <p>Chile, lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$47</span></div></div>
-                <button class="add-to-cart" data-nombre="Chilena Maíz Res" data-precio="47">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/Chilenota.png" alt="Chilenota Puerco">
-            <div class="card-body">
-                <h3>Chilenota Puerco</h3>
-                <p>Chile, lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$100</span></div></div>
-                <button class="add-to-cart" data-nombre="Chilenota Puerco" data-precio="100">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/Chilenota.png" alt="Chilenota Res">
-            <div class="card-body">
-                <h3>Chilenota Res</h3>
-                <p>Chile, lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$110</span></div></div>
-                <button class="add-to-cart" data-nombre="Chilenota Res" data-precio="110">➕ Agregar</button>
-            </div>
-        </div>
-    </div>
+<h2 id="tacos" class="section-title">🌮 Tacos y Mixtas</h2>
+<div class="grid">
 
-    <h2 id="tortas" class="section-title">🥖 Tortas</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="./imagenes/TortaEspecialConQueso.png" alt="Torta Especial Puerco">
-            <div class="card-body">
-                <h3>Torta Especial Puerco</h3>
-                <p>Con queso, aguacate y verdura</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$65</span></div></div>
-                <button class="add-to-cart" data-nombre="Torta Especial Puerco" data-precio="65">➕ Agregar</button>
-            </div>
+<div class="card">
+    <img src="./imagenes/TacoMaiz.png">
+    <div class="card-body">
+        <h3>Taco Maíz Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$34</span></div>
         </div>
-        <div class="card">
-            <img src="./imagenes/TortaEspecialConQueso.png" alt="Torta Especial Res">
-            <div class="card-body">
-                <h3>Torta Especial Res</h3>
-                <p>Con queso, aguacate y verdura</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$75</span></div></div>
-                <button class="add-to-cart" data-nombre="Torta Especial Res" data-precio="75">➕ Agregar</button>
-            </div>
-        </div>
-    </div>
-
-    <h2 id="burros" class="section-title">🌯 Burros</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="./imagenes/Burrote.png" alt="Burrote Puerco">
-            <div class="card-body">
-                <h3>Burrote Puerco</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$90</span></div></div>
-                <button class="add-to-cart" data-nombre="Burrote Puerco" data-precio="90">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/Burrote.png" alt="Burrote Res">
-            <div class="card-body">
-                <h3>Burrote Res</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$100</span></div></div>
-                <button class="add-to-cart" data-nombre="Burrote Res" data-precio="100">➕ Agregar</button>
-            </div>
-        </div>
-    </div>
-
-    <h2 id="papas" class="section-title">🥔 Papas</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="./imagenes/PapaChica.png" alt="Papa Chica Puerco">
-            <div class="card-body">
-                <h3>Papa Chica Puerco</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$120</span></div></div>
-                <button class="add-to-cart" data-nombre="Papa Chica Puerco" data-precio="120">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/PapaChica.png" alt="Papa Chica Res">
-            <div class="card-body">
-                <h3>Papa Chica Res</h3>
-                <p>Lechuga y cebolla</p>
-                <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span> <span class="p-value">$130</span></div></div>
-                <button class="add-to-cart" data-nombre="Papa Chica Res" data-precio="130">➕ Agregar</button>
-            </div>
-        </div>
-    </div>
-
-    <h2 id="bebidas" class="section-title">🥤 Bebidas</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="./imagenes/Coca600.png" alt="Coca Cola 600ml">
-            <div class="card-body">
-                <h3>Coca Cola 600ml</h3>
-                <p>Refresco</p>
-                <span class="single-price">$32</span>
-                <button class="add-to-cart" data-nombre="Coca Cola 600ml" data-precio="32">➕ Agregar</button>
-            </div>
-        </div>
-        <div class="card">
-            <img src="./imagenes/AguaCiel.png" alt="Agua 1Lt">
-            <div class="card-body">
-                <h3>Agua 1Lt</h3>
-                <p>Natural</p>
-                <span class="single-price">$27</span>
-                <button class="add-to-cart" data-nombre="Agua 1Lt" data-precio="27">➕ Agregar</button>
-            </div>
-        </div>
+        <button class="add-to-cart" data-nombre="Taco Maíz Puerco" data-precio="34" data-ingredientes="Lechuga,Cebolla">➕ Agregar</button>
     </div>
 </div>
 
-<div class="footer-cta">
-        <a href="https://wa.me/526878761552" target="_blank" class="wsp-btn-large">
-            📞 Hacer mi pedido por WhatsApp
-        </a>
+<div class="card">
+    <img src="./imagenes/TacoMaiz.png">
+    <div class="card-body">
+        <h3>Taco Maíz Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$40</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Taco Maíz Res" data-precio="40">➕ Agregar</button>
     </div>
-</div> <footer>
-    © Tacos Yiyo · Menú digital
-</footer>
+</div>
 
-<script>
-function copiarTelefono() {
-    const telefono = document.getElementById("telefono").innerText;
-    navigator.clipboard.writeText(telefono).then(() => {
-        alert("📋 Número copiado: " + telefono);
-    }).catch(err => {
-        console.error('Error al copiar: ', err);
-    });
-}
+<div class="card">
+    <img src="./imagenes/TacoHarina.png">
+    <div class="card-body">
+        <h3>Taco Harina Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$38</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Taco Harina Puerco" data-precio="38">➕ Agregar</button>
+    </div>
+</div>
 
-let carrito = [];
+<div class="card">
+    <img src="./imagenes/TacoHarina.png">
+    <div class="card-body">
+        <h3>Taco Harina Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$42</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Taco Harina Res" data-precio="42">➕ Agregar</button>
+    </div>
+</div>
 
-// Escuchar clics en botones de agregar
-document.querySelectorAll('.add-to-cart').forEach(boton => {
-    boton.addEventListener('click', () => {
-        const nombre = boton.getAttribute('data-nombre');
-        const precio = parseFloat(boton.getAttribute('data-precio'));
+<div class="card">
+    <img src="./imagenes/Gordita.png">
+    <div class="card-body">
+        <h3>Gordita Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$70</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Gordita Puerco" data-precio="70">➕ Agregar</button>
+    </div>
+</div>
 
-        const itemExistente = carrito.find(item => item.nombre === nombre);
+<div class="card">
+    <img src="./imagenes/Gordita.png">
+    <div class="card-body">
+        <h3>Gordita Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$75</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Gordita Res" data-precio="75">➕ Agregar</button>
+    </div>
+</div>
 
-        if (itemExistente) {
-            itemExistente.cantidad++;
-        } else {
-            carrito.push({ nombre, precio, cantidad: 1 });
-        }
-        actualizarUI();
-    });
-});
+<div class="card">
+    <img src="./imagenes/TacoMaiz.png">
+    <div class="card-body">
+        <h3>Mixta Senc. Maíz Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$40</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Mixta Senc. Maíz Puerco" data-precio="40">➕ Agregar</button>
+    </div>
+</div>
 
-function actualizarUI() {
-    const lista = document.getElementById('cart-list');
-    const totalSpan = document.getElementById('cart-total');
-    const contenedor = document.getElementById('cart-container');
-    
-    lista.innerHTML = '';
-    let total = 0;
+<div class="card">
+    <img src="./imagenes/TacoMaiz.png">
+    <div class="card-body">
+        <h3>Mixta Senc. Maíz Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$45</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Mixta Senc. Maíz Res" data-precio="45">➕ Agregar</button>
+    </div>
+</div>
 
-    carrito.forEach((item, index) => {
-        total += item.precio * item.cantidad;
-        
-        // Crear elemento de lista con botón de eliminar
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <div class="cart-item-info">
-                <span>${item.cantidad}x ${item.nombre}</span>
-                <span>$${item.precio * item.cantidad}</span>
-            </div>
-            <button class="remove-item-btn" onclick="eliminarDelCarrito(${index})">✕</button>
-        `;
-        lista.appendChild(li);
-    });
+<div class="card">
+    <img src="./imagenes/Chilenota.png">
+    <div class="card-body">
+        <h3>Super Mixta Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$92</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Super Mixta Puerco" data-precio="92">➕ Agregar</button>
+    </div>
+</div>
 
-    totalSpan.textContent = total;
-    
-    // Solo mostrar el carrito si tiene productos
-    contenedor.style.display = carrito.length > 0 ? 'flex' : 'none';
-}
+<div class="card">
+    <img src="./imagenes/Chilenota.png">
+    <div class="card-body">
+        <h3>Super Mixta Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$105</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Super Mixta Res" data-precio="105">➕ Agregar</button>
+    </div>
+</div>
 
-// Función para quitar una unidad o eliminar el producto
-function eliminarDelCarrito(index) {
-    if (carrito[index].cantidad > 1) {
-        carrito[index].cantidad--;
-    } else {
-        carrito.splice(index, 1);
-    }
-    actualizarUI();
-}
+</div>
 
-// Función para borrar todo el pedido
-function vaciarCarrito() {
-    if (confirm("¿Estás seguro de que quieres vaciar todo tu pedido?")) {
-        carrito = [];
-        actualizarUI();
-    }
-}
+<!-- ================= CHILENAS ================= -->
+<h2 id="chilenas" class="section-title">🌶️ Chilenas</h2>
+<div class="grid">
 
-function enviarWhatsApp() {
-    let mensaje = "¡Hola Tacos Yiyo! 🌮 Quiero hacer un pedido:\n\n";
-    
-    carrito.forEach(item => {
-        mensaje += `• ${item.cantidad}x ${item.nombre} ($${item.precio * item.cantidad})\n`;
-    });
+<div class="card">
+    <img src="./imagenes/ChilenaMaiz.png">
+    <div class="card-body">
+        <h3>Chilena Maíz Puerco</h3>
+        <p>Chile, lechuga y cebolla</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$44</span></div></div>
+        <button class="add-to-cart" data-nombre="Chilena Maíz Puerco" data-precio="44">➕ Agregar</button>
+    </div>
+</div>
 
-    mensaje += `\n*Total a pagar: $${document.getElementById('cart-total').textContent}*`;
-    
-    // Codificar para URL
-    const url = `https://wa.me/526871451508?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, '_blank');
-}
-</script>
+<div class="card">
+    <img src="./imagenes/ChilenaMaiz.png">
+    <div class="card-body">
+        <h3>Chilena Maíz Res</h3>
+        <p>Chile, lechuga y cebolla</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$47</span></div></div>
+        <button class="add-to-cart" data-nombre="Chilena Maíz Res" data-precio="47">➕ Agregar</button>
+    </div>
+</div>
 
-<a href="#combos" class="floating-btn">
-    💝 Ver Combos Especiales
-</a>
+<div class="card">
+    <img src="./imagenes/Chilenota.png">
+    <div class="card-body">
+        <h3>Chilenota Puerco</h3>
+        <p>Chile, lechuga y cebolla</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$100</span></div></div>
+        <button class="add-to-cart" data-nombre="Chilenota Puerco" data-precio="100">➕ Agregar</button>
+    </div>
+</div>
 
+<div class="card">
+    <img src="./imagenes/Chilenota.png">
+    <div class="card-body">
+        <h3>Chilenota Res</h3>
+        <p>Chile, lechuga y cebolla</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$110</span></div></div>
+        <button class="add-to-cart" data-nombre="Chilenota Res" data-precio="110">➕ Agregar</button>
+    </div>
+</div>
+
+</div>
+
+<!-- ================= TORTAS ================= -->
+<h2 id="tortas" class="section-title">🥖 Tortas</h2>
+<div class="grid">
+
+<div class="card">
+    <img src="./imagenes/TortaEspecialConQueso.png">
+    <div class="card-body">
+        <h3>Torta Especial Puerco</h3>
+        <p>Con queso, aguacate y verdura</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$65</span></div></div>
+        <button class="add-to-cart" data-nombre="Torta Especial Puerco" data-precio="65">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/TortaEspecialConQueso.png">
+    <div class="card-body">
+        <h3>Torta Especial Res</h3>
+        <p>Con queso, aguacate y verdura</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$75</span></div></div>
+        <button class="add-to-cart" data-nombre="Torta Especial Res" data-precio="75">➕ Agregar</button>
+    </div>
+</div>
+
+</div>
+
+<!-- ================= BURROS ================= -->
+<h2 id="burros" class="section-title">🌯 Burros</h2>
+<div class="grid">
+
+<div class="card">
+    <img src="./imagenes/Burrote.png">
+    <div class="card-body">
+        <h3>Burrote Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$90</span></div></div>
+        <button class="add-to-cart" data-nombre="Burrote Puerco" data-precio="90">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/Burrote.png">
+    <div class="card-body">
+        <h3>Burrote Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$100</span></div></div>
+        <button class="add-to-cart" data-nombre="Burrote Res" data-precio="100">➕ Agregar</button>
+    </div>
+</div>
+
+</div>
+
+<!-- ================= PAPAS ================= -->
+<h2 id="papas" class="section-title">🥔 Papas</h2>
+<div class="grid">
+
+<div class="card">
+    <img src="./imagenes/PapaChica.png">
+    <div class="card-body">
+        <h3>Papa Chica Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$120</span></div></div>
+        <button class="add-to-cart" data-nombre="Papa Chica Puerco" data-precio="120">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/PapaChica.png">
+    <div class="card-body">
+        <h3>Papa Chica Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$130</span></div></div>
+        <button class="add-to-cart" data-nombre="Papa Chica Res" data-precio="130">➕ Agregar</button>
+    </div>
+</div>
+
+</div>
+
+<!-- ================= Desayunos ==============-->
+
+<h2 id="desayunos" class="section-title">☀️ Desayunos</h2>
+<div class="grid">
+
+<div class="card">
+    <img src="./imagenes/TacoMaiz.png">
+    <div class="card-body">
+        <h3>Taco Maíz Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$34</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Taco Maíz Puerco" data-precio="34" data-ingredientes="Lechuga,Cebolla">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/TacoMaiz.png">
+    <div class="card-body">
+        <h3>Taco Maíz Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$40</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Taco Maíz Res" data-precio="40">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/TacoHarina.png">
+    <div class="card-body">
+        <h3>Taco Harina Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$38</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Taco Harina Puerco" data-precio="38">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/TacoHarina.png">
+    <div class="card-body">
+        <h3>Taco Harina Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$42</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Taco Harina Res" data-precio="42">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/Gordita.png">
+    <div class="card-body">
+        <h3>Gordita Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$70</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Gordita Puerco" data-precio="70">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/Gordita.png">
+    <div class="card-body">
+        <h3>Gordita Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$75</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Gordita Res" data-precio="75">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/TacoMaiz.png">
+    <div class="card-body">
+        <h3>Mixta Senc. Maíz Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$40</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Mixta Senc. Maíz Puerco" data-precio="40">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/TacoMaiz.png">
+    <div class="card-body">
+        <h3>Mixta Senc. Maíz Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$45</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Mixta Senc. Maíz Res" data-precio="45">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/Chilenota.png">
+    <div class="card-body">
+        <h3>Super Mixta Puerco</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$92</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Super Mixta Puerco" data-precio="92">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/Chilenota.png">
+    <div class="card-body">
+        <h3>Super Mixta Res</h3>
+        <p>Lechuga y cebolla</p>
+        <div class="price-table">
+            <div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$105</span></div>
+        </div>
+        <button class="add-to-cart" data-nombre="Super Mixta Res" data-precio="105">➕ Agregar</button>
+    </div>
+</div>
+
+</div>
+
+<!-- ================= COMBOS ================= -->
+<h2 id="combos" class="section-title">♥️ Combos</h2>
+<div class="grid">
+
+<div class="card">
+    <img src="./imagenes/PapaChica.png">
+    <div class="card-body">
+        <h3>Combo pareja</h3>
+        <p>Papa especial sencilla + 2 bebidas</p>
+        <div class="price-table"><div class="price-row"><span class="p-label">PRECIO</span><span class="p-value">$150</span></div></div>
+        <button class="add-to-cart" data-nombre="Combo pareja" data-precio="150">➕ Agregar</button>
+    </div>
+</div>
+
+</div>
+
+<!-- ================= BEBIDAS ================= -->
+<h2 id="bebidas" class="section-title">🥤 Bebidas</h2>
+<div class="grid">
+
+<div class="card">
+    <img src="./imagenes/Coca600.png">
+    <div class="card-body">
+        <h3>Coca Cola 600ml</h3>
+        <p>Refresco</p>
+        <span class="single-price">$32</span>
+        <button class="add-to-cart" data-nombre="Coca Cola 600ml" data-precio="32">➕ Agregar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="./imagenes/AguaCiel.png">
+    <div class="card-body">
+        <h3>Agua 1Lt</h3>
+        <p>Natural</p>
+        <span class="single-price">$27</span>
+        <button class="add-to-cart" data-nombre="Agua 1Lt" data-precio="27">➕ Agregar</button>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+<footer>© Tacos Yiyo · Menú digital</footer>
+
+<a href="#combos" class="floating-btn-desayunos">🍳 Ver Desayunos</a>
+<a href="#combos" class="floating-btn">♥️✨ Ver Combos</a>
+
+<!-- ================= CARRITO ================= -->
 <div id="cart-container" class="cart-floating">
     <div class="cart-header">
         <h4>Tu Pedido 🌮</h4>
         <div class="cart-header-btns">
-            <button onclick="vaciarCarrito()" class="empty-cart-btn" title="Vaciar carrito">🗑️</button>
-            <button onclick="cerrarCarrito()" class="close-cart">✕</button>
+            <button onclick="vaciarCarrito()">🗑️</button>
+            <button onclick="cerrarCarrito()">✕</button>
         </div>
     </div>
     <ul id="cart-list"></ul>
     <div class="cart-footer">
         <p>Total: <strong>$<span id="cart-total">0</span></strong></p>
-        <button onclick="enviarWhatsApp()" class="wsp-confirm-btn">
-            Confirmar por WhatsApp
-        </button>
+        <button onclick="enviarWhatsApp()" class="wsp-confirm-btn">Confirmar por WhatsApp</button>
     </div>
 </div>
+
+<!-- ================= MODAL ================= -->
+<div id="modal-ingredientes" class="modal-overlay">
+    <div class="modal-content">
+        <h3 id="modal-titulo"></h3>
+        <p class="modal-subtitle">Selecciona los ingredientes</p>
+        <div id="lista-opciones" class="options-grid"></div>
+        <div class="modal-actions">
+            <button class="btn-cancel" onclick="cerrarModal()">Cancelar</button>
+            <button class="btn-confirm" id="btn-confirmar-add">Agregar</button>
+        </div>
+    </div>
+</div>
+
+<script src="./js/carrito.js"></script>
+<script src="./js/modal.js"></script>
+<script src="./js/app.js"></script>
 
 </body>
 </html>
