@@ -399,7 +399,7 @@ html {
 
 .cart-floating {
     position: fixed;
-    bottom: 80px; 
+    bottom: 300px; 
     right: 20px;
     background: #1a1a1a;
     border: 2px solid #ff7a00;
@@ -624,9 +624,23 @@ h2.section-title {
     padding: 25px;
     border-radius: 20px;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
+    max-height: 70vh;
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     animation: popIn 0.3s ease;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        max-height: 70vh;
+        border-radius: 5px;
+        padding-bottom: 30px;
+    }
+
 }
 
 @keyframes popIn {
@@ -967,15 +981,17 @@ h2.section-title {
         width: 100%;    /* Ancho completo */
         max-width: 100%; /* Quitamos límite de 400px */
         height: auto;   /* Altura automática... */
-        max-height: 60vh; /* ...pero que NUNCA cubra más del 60% de la pantalla */
+        max-height: 40vh; /* ...pero que NUNCA cubra más del 60% de la pantalla */
         
         /* 3. Estética de "Hoja" */
-        border-radius: 25px 25px 0 0; /* Redondeamos solo arriba */
+        border-radius: 0px 0px 0 0; /* Redondeamos solo arriba */
         border-left: none;
         border-top: 1px solid #444;
         
         /* 4. Ajuste de sombras para que se vea que sale de abajo */
         box-shadow: 0 -5px 30px rgba(0,0,0,0.5);
+
+        
     }
 
     /* Animación específica para móvil: Sube desde abajo */
@@ -1000,6 +1016,8 @@ h2.section-title {
     /* Hacemos que la lista de productos tenga scroll si es muy larga */
     #cart-list {
         padding-bottom: 80px; /* Espacio extra abajo para no tapar con el botón de WhatsApp */
+        max-height: 18vh;      /* EL LISTADO SCROLLEA */
+        overflow-y: auto;
     }
     
     /* El botón de WhatsApp fijo y visible */
@@ -1010,4 +1028,9 @@ h2.section-title {
         z-index: 10;
         padding: 15px;
     }
+}
+
+body.ocultar-flotantes .floating-btn,
+body.ocultar-flotantes .floating-btn-desayunos {
+    display: none !important;
 }

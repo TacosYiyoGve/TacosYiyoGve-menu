@@ -3,6 +3,8 @@ let carrito = [];
 // Agregamos el 4to parámetro: cantidad (por defecto 1 para bebidas que no usan modal)
 function agregarAlCarrito(nombre, precio, ingredientes = [], cantidad = 1) {
 
+    document.body.classList.add("ocultar-flotantes");
+
     const key = ingredientes.sort().join(",");
     const existente = carrito.find(p => p.nombre === nombre && p.key === key);
 
@@ -66,6 +68,7 @@ function vaciarCarrito() {
 }
 
 function cerrarCarrito() {
+    document.body.classList.remove("ocultar-flotantes");
     document.getElementById("cart-container").style.display = "none";
 }
 

@@ -21,6 +21,9 @@ window.cambiarCantidad = function(cambio) {
 
 function abrirModal(nombre, carnes, precioBase, ingredientes) {
     
+    document.body.classList.add("ocultar-flotantes");
+    document.body.style.overflow = "hidden";
+
     // Reseteamos la cantidad a 1 cada vez que se abre el modal
     cantidadActual = 1;
     spanCantidad.textContent = "1";
@@ -99,6 +102,10 @@ function renderizarVariantes(titulo, opciones) {
 }
 
 function cerrarModal() {
+
+   // document.body.classList.remove("ocultar-flotantes");
+   // document.body.style.overflow = "";
+
     modal.style.display = "none";
     productoTemporal = null;
 }
