@@ -1,10 +1,9 @@
-
+/* ================= CONFIGURACIÓN GLOBAL ================= */
 html {
     scroll-behavior: smooth;
 }
 
-*
-{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -18,22 +17,15 @@ body {
 }
 
 /* ================= HEADER ================= */
-
 .header {
     background: linear-gradient(135deg, #ff7a00, #ffb347);
     padding: 35px 20px 6px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
     position: relative;
 }
 
 .header-content {
     max-width: 900px;
     margin: 0 auto;
-    position: static;
-}
-
-.header-center {
     text-align: center;
 }
 
@@ -60,8 +52,26 @@ body {
     font-weight: 500;
 }
 
-/* ================= CONTACTO ================= */
+/* Botón Header WhatsApp */
+.wsp-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: darkseagreen;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.3s ease;
+    width: 100%;
+}
 
+.wsp-btn:hover {
+    background: #1ebe57;
+}
+
+/* ================= CONTACTO (Caja Flotante Superior) ================= */
 .contact-box {
     position: absolute;
     right: 20px;
@@ -70,7 +80,7 @@ body {
     color: #ff7a00;
     padding: 16px 20px;
     border-radius: 5px;
-    text-align: right;
+    text-align: center;
     width: max-content;
     box-shadow: 0 10px 25px rgba(0, 0, 0, .28);
     z-index: 10;
@@ -86,7 +96,7 @@ body {
 
 .phone-row {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 8px;
     font-weight: 700;
@@ -99,7 +109,7 @@ body {
     color: white;
     border: none;
     padding: 8px 16px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -111,12 +121,57 @@ body {
     transform: scale(0.98);
 }
 
-/* ================= CONTENIDO ================= */
+/* ================= NAVEGADOR DE CATEGORÍAS ================= */
+.category-nav {
+    position: sticky;
+    top: 0;
+    background: #1a1a1a;
+    padding: 12px 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ff7a00;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
 
+.nav-scroll {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 15px;
+    scrollbar-width: none;
+}
+
+.nav-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-item {
+    color: #eee;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #333;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    background: #ff7a00;
+    color: white;
+}
+
+/* ================= CONTENIDO PRINCIPAL ================= */
 .container {
     max-width: 900px;
     margin: auto;
     padding: 22px;
+    padding-bottom: 180px; /* espacio para el carrito */
+}
+/* Ajuste scroll smooth para títulos */
+h2.section-title {
+    scroll-margin-top: 80px; 
 }
 
 .section-title {
@@ -132,6 +187,7 @@ body {
     gap: 20px;
 }
 
+/* --- TARJETAS DE PRODUCTO --- */
 .card {
     background: #444;
     border-radius: 18px;
@@ -172,12 +228,28 @@ body {
     margin-bottom: 12px;
 }
 
-/* --- NUEVOS ESTILOS PARA PRECIOS --- */
+/* Botón Agregar dentro de la tarjeta */
+.add-to-cart {
+    width: 100%;
+    background: #ff7a00;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
 
-/* Contenedor para la tabla de precios Puerco/Res */
+.add-to-cart:active {
+    transform: scale(0.95);
+}
+
+/* --- PRECIOS EN TARJETAS --- */
 .price-table {
-    margin-top: auto; /* Empuja al fondo */
-    background: rgba(255,255,255,0.05); /* Fondo sutil para separar */
+    margin-top: auto;
+    background: rgba(255,255,255,0.05);
     padding: 8px 10px;
     border-radius: 8px;
 }
@@ -205,7 +277,6 @@ body {
     color: #ffb347;
 }
 
-/* Estilo para productos que solo tienen un precio (Bebidas) */
 .single-price {
     display: block;
     margin-top: auto;
@@ -215,394 +286,7 @@ body {
     color: #ffb347;
 }
 
-/* ================= FOOTER ================= */
-
-footer {
-    text-align: center;
-    padding: 40px 10px;
-    font-size: 14px;
-    color: #666;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 768px) {
-    .header { padding-bottom: 30px; }
-    
-    .contact-box {
-        position: static;
-        margin: 25px auto 0;
-        text-align: center;
-        width: 100%;
-        max-width: 300px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    }
-
-    .phone-row { justify-content: center; }
-    .header-center h1 { font-size: 28px; }
-    .section-title { font-size: 22px; margin-top: 30px; }
-
-    .grid {
-        gap: 15px; 
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 380px) {
-    .grid { grid-template-columns: 1fr; }
-}
-
-/* ================= BOTONES WHATSAPP ================= */
-
-/* Botón del header */
-.wsp-btn {
-    display: block;
-    margin-top: 10px;
-    background: darkseagreen;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    padding: 10px 16px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 700;
-    transition: background 0.3s ease;
-}
-
-.wsp-btn:hover {
-    background: #1ebe57;
-}
-
-/* Botón grande del final */
-.footer-cta {
-    text-align: center;
-    margin: 40px 0 20px;
-}
-
-.wsp-btn-large {
-    display: inline-block;
-    background: #25d366;
-    color: white;
-    text-decoration: none;
-    padding: 18px 30px;
-    border-radius: 50px;
-    font-size: 18px;
-    font-weight: 700;
-    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.wsp-btn-large:hover {
-    transform: scale(1.05);
-    background: #1ebe57;
-}
-
-/* Ajuste para móviles */
-@media (max-width: 768px) {
-    .wsp-btn-large {
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
-
-/* ================= BOTÓN FLOTANTE ================= */
-.floating-btn {
-    position: fixed;
-    bottom: 30px;      /* Más separado del borde en PC */
-    right: 30px;
-    background-color: darkorange;
-    color: white !important;
-    text-decoration: none;
-    
-    /* Tamaño grande para PC */
-    padding: 16px 28px; 
-    font-size: 18px; 
-    
-    border-radius: 50px;
-    font-weight: 700;
-    box-shadow: 0 8px 25px rgba(255, 75, 180, 0.5);
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 2px solid white;
-    transition: all 0.3s ease;
-}
-
-.floating-btn:hover {
-    transform: scale(1.05);
-    background-color: orange;
-}
-
-.floating-btn-desayunos {
-    position: fixed;
-    bottom: 110px;      /* Más separado del borde en PC */
-    right: 30px;
-    background-color: darkorange;
-    color: white !important;
-    text-decoration: none;
-    
-    /* Tamaño grande para PC */
-    padding: 16px 28px; 
-    font-size: 18px; 
-    
-    border-radius: 50px;
-    font-weight: 700;
-    box-shadow: 0 8px 25px rgba(255, 75, 180, 0.5);
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 2px solid white;
-    transition: all 0.3s ease;
-}   
-
-.floating-btn-desayunos:hover {
-    transform: scale(1.05);
-    background-color: orange;
-}
-
-/* Animación suave para el salto al ID */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Para que no desaparezca en pantallas pequeñas */
-@media (max-width: 768px) {
-    .floating-btn {
-        bottom: 20px;   /* Más pegado al borde en Cel */
-        right: 15px;
-        
-        /* Tamaño más pequeño para Celular */
-        padding: 10px 16px; 
-        font-size: 13px; 
-        
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        gap: 6px;
-    }
-}
-
-/* Para que no desaparezca en pantallas pequeñas */
-@media (max-width: 768px) {
-    .floating-btn-desayunos {
-        bottom: 70px;   /* Más pegado al borde en Cel */
-        right: 15px;
-        
-        /* Tamaño más pequeño para Celular */
-        padding: 10px 16px; 
-        font-size: 13px; 
-        
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        gap: 6px;
-    }
-}
-
-.cart-floating {
-    position: fixed;
-    bottom: 300px; 
-    right: 20px;
-    background: #1a1a1a;
-    border: 2px solid #ff7a00;
-    padding: 20px;
-    border-radius: 15px;
-    width: 300px;
-    max-height: 400px;
-    overflow-y: auto;
-    z-index: 9999;
-    display: none; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.cart-floating h4 { color: #ff7a00; margin-bottom: 10px; }
-.cart-floating ul { list-style: none; padding: 0; font-size: 14px; }
-.cart-floating li { margin-bottom: 8px; border-bottom: 1px solid #333; padding-bottom: 4px; }
-
-@media (max-width: 768px) {
-    .cart-floating {
-        width: 90%;
-        left: 5%;
-        right: 5%;
-        bottom: 100px;
-    }
-}
-
-
-/* Botón Agregar dentro de la tarjeta */
-.add-to-cart {
-    width: 100%;
-    background: #ff7a00;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.2s;
-}
-
-.add-to-cart:active {
-    transform: scale(0.95);
-}
-
-/* Carrito Flotante */
-.cart-floating {
-    position: fixed;
-    bottom: 230px;
-    right: 20px;
-    background: #1a1a1a;
-    border: 2px solid #ff7a00;
-    padding: 15px;
-    border-radius: 15px;
-    width: 320px;
-    max-height: 450px;
-    display: none; /* Se muestra por JS */
-    flex-direction: column;
-    z-index: 10000;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-}
-
-.cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: top;
-    border-bottom: 1px solid #333;
-    padding-bottom: 8px;
-}
-
-.close-cart { background: none; border: none; color: #666; cursor: pointer; }
-
-#cart-list {
-    list-style: none;
-    margin: 10px 0;
-    overflow-y: auto;
-    flex-grow: 1;
-}
-
-#cart-list li {
-    font-size: 14px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.wsp-confirm-btn {
-    width: 100%;
-    background: #25d366;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 10px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .cart-floating {
-        width: 95%;
-        left: 2.5%;
-        right: 2.5%;
-    }
-}
-
-.cart-header-btns {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.empty-cart-btn {
-    background: none;
-    border: none;
-    font-size: 10px;
-    cursor: pointer;
-    filter: grayscale(1);
-    transition: filter 0.2s;
-}
-
-.empty-cart-btn:hover {
-    filter: grayscale(0);
-}
-
-/* Botón individual de eliminar item */
-.remove-item-btn {
-    background: #ff4444;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    width: 24px;
-    height: 24px;
-    font-size: 10px;
-    cursor: pointer;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cart-item-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-/* ================= NAVEGADOR DE CATEGORÍAS ================= */
-.category-nav {
-    position: sticky;
-    top: 0;
-    background: #1a1a1a;
-    padding: 12px 0;
-    z-index: 1000;
-    border-bottom: 2px solid #ff7a00;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.nav-scroll {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 0 15px;
-    scrollbar-width: none; /* Oculta scroll en Firefox */
-}
-
-.nav-scroll::-webkit-scrollbar {
-    display: none; /* Oculta scroll en Chrome/Safari */
-}
-
-.nav-item {
-    color: #eee;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 20px;
-    background: #333;
-    transition: all 0.3s ease;
-}
-
-.nav-item:hover {
-    background: #ff7a00;
-    color: white;
-}
-
-/* Ajuste para que el título no quede tapado por la barra al saltar */
-h2.section-title {
-    scroll-margin-top: 80px; 
-}
-
-@media (max-width: 768px) {
-    .nav-scroll {
-        justify-content: flex-start; /* Permite scroll lateral en móvil */
-    }
-    .nav-item {
-        font-size: 13px;
-        padding: 6px 12px;
-    }
-}
-
+/* ================= MODAL DE PRODUCTO ================= */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -610,8 +294,8 @@ h2.section-title {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 20000; /* Por encima de todo */
-    display: none; /* Oculto por defecto */
+    z-index: 20000; /* Capa más alta */
+    display: none;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -624,23 +308,11 @@ h2.section-title {
     padding: 25px;
     border-radius: 20px;
     width: 100%;
-    max-width: 300px;
-    max-height: 70vh;
+    max-width: 350px; /* Un poco más ancho */
+    max-height: 80vh;
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     animation: popIn 0.3s ease;
     overflow-y: auto;
-}
-
-@media (max-width: 768px) {
-
-    .modal-content {
-        width: 100%;
-        max-width: 100%;
-        max-height: 70vh;
-        border-radius: 5px;
-        padding-bottom: 30px;
-    }
-
 }
 
 @keyframes popIn {
@@ -662,6 +334,7 @@ h2.section-title {
     font-size: 14px;
 }
 
+/* Opciones e Ingredientes */
 .options-grid {
     display: flex;
     flex-direction: column;
@@ -669,7 +342,6 @@ h2.section-title {
     margin-bottom: 25px;
 }
 
-/* Estilo de los Checkboxes */
 .ingredient-option {
     display: flex;
     align-items: center;
@@ -693,40 +365,7 @@ h2.section-title {
     cursor: pointer;
 }
 
-.ingredient-option span {
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.modal-actions {
-    display: flex;
-    gap: 10px;
-}
-
-.modal-actions button {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    font-weight: 700;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.btn-cancel {
-    background: #333;
-    color: white;
-}
-
-.btn-confirm {
-    background: #ff7a00;
-    color: white;
-}
-
-.btn-confirm:hover { background: #e06b00; }
-.btn-cancel:hover { background: #444; }
-
-/* Contenedor de cantidad */
+/* Selector de Cantidad */
 .quantity-container {
     text-align: center;
     margin: 20px 0;
@@ -752,19 +391,14 @@ h2.section-title {
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2s;
-    display: flex;       /* Centrar el símbolo + o - */
+    display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.2s;
 }
 
-.qty-btn:hover {
-    background: #ff7a00;
-}
-
-.qty-btn:active {
-    transform: scale(0.9);
-}
+.qty-btn:hover { background: #ff7a00; }
+.qty-btn:active { transform: scale(0.9); }
 
 #cantidad-numero {
     font-size: 24px;
@@ -773,88 +407,159 @@ h2.section-title {
     text-align: center;
 }
 
-/* =========================================
-   DISEÑO MODERNO DEL CARRITO (Pegar al final)
-   ========================================= */
-
-/* Fondo oscuro y desenfocado detrás del carrito */
-.cart-floating {
-    background: rgba(20, 20, 20, 0.95);
-    backdrop-filter: blur(10px);
-    border-left: 1px solid #333;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.8);
-    /* Aseguramos que ocupe bien el espacio */
-    display: none; 
-    flex-direction: column;
+/* Botones Acción Modal */
+.modal-actions {
+    display: flex;
+    gap: 10px;
 }
 
-/* Cabecera */
-.cart-header {
-    background: transparent;
+.modal-actions button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-cancel {
+    background: #333;
+    color: white;
+}
+.btn-confirm {
+    background: #ff7a00;
+    color: white;
+}
+.btn-confirm:hover { background: #e06b00; }
+.btn-cancel:hover { background: #444; }
+
+
+/* ================= CARRITO FLOTANTE (DISEÑO MODERNO) ================= */
+.cart-floating {
+     position: sticky;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(20, 20, 20, 0.97);
+    border-top: 2px solid #ff7a00;
+    display: none; /* JS controla */
+    flex-direction: column;
+    z-index: 999;
+    max-height: 400px;
+}
+
+.cart-floating .cart-header {
     border-bottom: 1px solid #333;
-    padding: 20px;
+}
+
+.cart-floating #cart-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.cart-floating .cart-footer {
+    border-top: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+    .cart-floating {
+        border-radius: 0px 0px 0 0;
+    }
+
+    .container {
+        padding-bottom: 100px; /* más alto en móvil */
+    }
+}
+
+/* Cabecera del Carrito */
+.cart-header {
+    background: darkorange;
+    border-bottom: 1px solid #333;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .cart-header h4 {
-    font-size: 22px;
+    font-size: 15px;
     margin: 0;
     color: #fff;
-    letter-spacing: 0.5px;
 }
 
-/* Botones de cabecera (Cerrar y Vaciar) */
 .cart-header-btns {
     display: flex;
     gap: 10px;
 }
 
-.btn-icon-header, .btn-close-cart {
-    background: #333;
+.btn-icon-header {
+    background: #222;
     border: none;
     color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Redondos */
-    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 16px;
     cursor: pointer;
-    transition: all 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease;
 }
 
 .btn-icon-header:hover {
-    background: #ff453a; /* Rojo al pasar el mouse (vaciar) */
+    background: #ff453a;
     transform: scale(1.1);
 }
 
-.btn-close-cart:hover {
-    background: #555;
-    transform: rotate(90deg); /* Efecto de giro al cerrar */
+.close-cart {
+    background: #222;
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    transition: transform 0.2s;
 }
 
-/* Lista de Productos */
+.close-cart:hover {
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Lista de Items */
 #cart-list {
+    list-style: none;
     padding: 20px;
     gap: 15px;
     display: flex;
     flex-direction: column;
-    overflow-y: auto; /* Scroll si hay muchos */
-    height: 100%;
+    overflow-y: auto;
+    flex-grow: 1;
+    overscroll-behavior: contain;
 }
 
-/* Tarjeta de cada producto */
+.cart-floating,
+.cart-floating * {
+    touch-action: pan-y;
+}
+
+
 .carrito-item {
     background: #2a2a2a;
-    padding: 15px;
+    padding: 12px;
     border-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     border: 1px solid #333;
     animation: fadeIn 0.3s ease;
 }
@@ -871,56 +576,51 @@ h2.section-title {
     flex: 1;
 }
 
-/* Badge de cantidad (ej: 3x) */
 .cantidad-badge {
     background: #ff7a00;
     color: white;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
     padding: 4px 8px;
     border-radius: 6px;
-    min-width: 30px;
+    min-width: 28px;
     text-align: center;
 }
 
 .detalles strong {
     display: block;
-    font-size: 16px;
+    font-size: 15px;
     color: #fff;
-    margin-bottom: 2px;
 }
 
 .subtexto {
-    font-size: 12px;
+    font-size: 11px;
     color: #aaa;
-    line-height: 1.2;
 }
 
-/* Lado derecho (Precio y Eliminar) */
 .acciones-producto {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 8px;
-    margin-left: 10px;
+    gap: 6px;
+    margin-left: 8px;
 }
 
 .precio-item {
     font-weight: bold;
     color: #ffb347;
-    font-size: 16px;
+    font-size: 15px;
 }
 
-/* Botón Eliminar (la X pequeña) */
 .btn-eliminar {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 69, 58, 0.15);
     border: none;
     color: #ff453a;
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -930,10 +630,9 @@ h2.section-title {
 .btn-eliminar:hover {
     background: #ff453a;
     color: white;
-    transform: scale(1.1);
 }
 
-/* Footer (Total y WhatsApp) */
+/* Footer del Carrito */
 .cart-footer {
     background: #1a1a1a;
     padding: 20px;
@@ -941,22 +640,25 @@ h2.section-title {
 }
 
 .cart-footer p {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
+    font-weight: 700;
 }
 
 .wsp-confirm-btn {
     width: 100%;
     background: linear-gradient(135deg, #25D366, #128C7E);
     border: none;
-    padding: 15px;
-    border-radius: 50px;
-    font-size: 18px;
+    padding: 14px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    cursor: pointer;
     transition: transform 0.2s;
 }
 
@@ -965,38 +667,133 @@ h2.section-title {
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
 }
 
-/* =========================================
-   RESPONSIVO: MÓVILES (Estilo Bottom Dock)
-   ========================================= */
-@media (max-width: 768px) {
-    
-    .cart-floating {
-        /* 1. Posición: Pegado abajo */
-        top: auto;      /* Quitamos el top: 0 */
-        bottom: 0;      /* Pegamos al fondo */
-        left: 0;
-        right: 0;       
-        
-        /* 2. Tamaño */
-        width: 100%;    /* Ancho completo */
-        max-width: 100%; /* Quitamos límite de 400px */
-        height: auto;   /* Altura automática... */
-        max-height: 40vh; /* ...pero que NUNCA cubra más del 60% de la pantalla */
-        
-        /* 3. Estética de "Hoja" */
-        border-radius: 0px 0px 0 0; /* Redondeamos solo arriba */
-        border-left: none;
-        border-top: 1px solid #444;
-        
-        /* 4. Ajuste de sombras para que se vea que sale de abajo */
-        box-shadow: 0 -5px 30px rgba(0,0,0,0.5);
+/* ================= BOTONES FLOTANTES ================= */
+.floating-btn, 
+.floating-btn-desayunos {
+    position: fixed;
+    right: 30px;
+    background-color: darkorange;
+    color: white !important;
+    text-decoration: none;
+    padding: 16px 28px; 
+    font-size: 18px; 
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 8px 25px rgba(255, 75, 180, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
 
-        
+.floating-btn:hover, 
+.floating-btn-desayunos:hover {
+    transform: scale(1.05);
+    background-color: orange;
+}
+
+/* Posiciones Específicas PC */
+.floating-btn { bottom: 30px; }
+.floating-btn-desayunos { bottom: 110px; }
+
+/* Clase JS para ocultarlos al abrir modal/carrito */
+body.ocultar-flotantes .floating-btn,
+body.ocultar-flotantes .floating-btn-desayunos {
+    display: none !important;
+}
+
+/* ================= FOOTER PÁGINA ================= */
+footer {
+    text-align: center;
+    padding: 40px 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-cta {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.wsp-btn-large {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 18px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.wsp-btn-large:hover {
+    transform: scale(1.05);
+    background: #1ebe57;
+}
+
+/* ================= RESPONSIVE (MÓVILES) ================= */
+
+@media (max-width: 768px) {
+    /* Header & Contacto */
+    .header { padding-bottom: 30px; }
+    
+    .contact-box {
+        position: static;
+        margin: 25px auto 0;
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    .phone-row { justify-content: center; }
+    .header-center h1 { font-size: 28px; }
+    .section-title { font-size: 22px; margin-top: 30px; }
+
+    /* Grilla de 2 columnas */
+    .grid {
+        gap: 15px; 
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Animación específica para móvil: Sube desde abajo */
+    /* Navegación */
+    .nav-scroll { justify-content: flex-start; }
+    .nav-item { font-size: 13px; padding: 6px 12px; }
+
+    /* Botón Footer Grande */
+    .wsp-btn-large { width: 100%; box-sizing: border-box; }
+
+    /* Botones Flotantes (Más pequeños y pegados) */
+    .floating-btn, 
+    .floating-btn-desayunos {
+        right: 15px;
+        padding: 10px 16px; 
+        font-size: 13px; 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        gap: 6px;
+    }
+    .floating-btn { bottom: 20px; }
+    .floating-btn-desayunos { bottom: 70px; }
+
+    /* --- ESTILOS CARRITO MÓVIL (DOCK INFERIOR) --- */
     .cart-floating {
+        top: auto;      
+        bottom: 0;      
+        left: 0;
+        right: 0;       
+        width: 100%;    
+        max-width: 100%; 
+        height: auto;   
+        max-height: 50vh; /* Máximo mitad de pantalla */
+        border-radius: 20px 20px 0 0; 
+        border: none;
+        border-top: 1px solid #444;
+        box-shadow: 0 -5px 30px rgba(0,0,0,0.5);
         animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        overscroll-behavior: contain;
     }
 
     @keyframes slideUp {
@@ -1004,33 +801,28 @@ h2.section-title {
         to { transform: translateY(0); opacity: 1; }
     }
 
-    /* Ajustes internos para móvil */
-    .cart-header {
-        padding: 15px 20px; /* Cabecera un poco más compacta */
-    }
+    .cart-header { padding: 12px 20px; }
+    .cart-header h4 { font-size: 18px; }
 
-    .cart-header h4 {
-        font-size: 18px; /* Título un poco más chico */
-    }
-
-    /* Hacemos que la lista de productos tenga scroll si es muy larga */
     #cart-list {
-        padding-bottom: 80px; /* Espacio extra abajo para no tapar con el botón de WhatsApp */
-        max-height: 18vh;      /* EL LISTADO SCROLLEA */
+        padding-bottom: 20px; 
         overflow-y: auto;
     }
     
-    /* El botón de WhatsApp fijo y visible */
     .cart-footer {
         position: sticky;
         bottom: 0;
-        background: #1a1a1a; /* Aseguramos fondo para que no se trasluzca */
         z-index: 10;
         padding: 15px;
     }
 }
 
-body.ocultar-flotantes .floating-btn,
-body.ocultar-flotantes .floating-btn-desayunos {
-    display: none !important;
+@media (max-width: 380px) {
+    /* Grilla de 1 columna en pantallas muy pequeñas */
+    .grid { grid-template-columns: 1fr; }
+}
+
+#cart-list {
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }

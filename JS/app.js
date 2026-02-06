@@ -72,4 +72,30 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const carrito = document.getElementById("cart-container");
+
+    carrito.addEventListener("wheel", (e) => {
+        e.stopPropagation();
+    }, { passive: true });
+
+    carrito.addEventListener("touchmove", (e) => {
+        e.stopPropagation();
+    }, { passive: true });
+
+    // 🔒 BLOQUEO REAL DEL SCROLL
+    carrito.addEventListener("mouseenter", () => {
+        document.body.style.overflow = "hidden";
+    });
+
+    carrito.addEventListener("mouseleave", () => {
+        document.body.style.overflow = "";
+    });
+
+    carrito.addEventListener("touchstart", () => {
+        document.body.style.overflow = "hidden";
+    });
+
+    carrito.addEventListener("touchend", () => {
+        document.body.style.overflow = "";
+    });
 });
