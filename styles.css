@@ -465,7 +465,7 @@ html {
 .cart-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
     border-bottom: 1px solid #333;
     padding-bottom: 8px;
 }
@@ -474,7 +474,7 @@ html {
 
 #cart-list {
     list-style: none;
-    margin: 15px 0;
+    margin: 10px 0;
     overflow-y: auto;
     flex-grow: 1;
 }
@@ -514,7 +514,7 @@ html {
 .empty-cart-btn {
     background: none;
     border: none;
-    font-size: 18px;
+    font-size: 10px;
     cursor: pointer;
     filter: grayscale(1);
     transition: filter 0.2s;
@@ -532,7 +532,7 @@ html {
     border-radius: 4px;
     width: 24px;
     height: 24px;
-    font-size: 12px;
+    font-size: 10px;
     cursor: pointer;
     margin-left: 10px;
     display: flex;

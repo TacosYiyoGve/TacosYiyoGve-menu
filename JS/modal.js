@@ -104,7 +104,7 @@ function renderizarVariantes(titulo, opciones) {
 function cerrarModal() {
 
    // document.body.classList.remove("ocultar-flotantes");
-   // document.body.style.overflow = "";
+    document.body.style.overflow = "";
 
     modal.style.display = "none";
     productoTemporal = null;
